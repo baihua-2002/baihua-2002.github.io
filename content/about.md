@@ -4,38 +4,37 @@ date: 2025-10-21
 description: '春风桃李花开日，秋雨梧桐叶落时'
 aliases: ["/hello-world/"]
 ---
-## 关于我
-* 还在上学
-* 大数据 × 地矿油
-* 前OI选手
-* 记得工作的时候称植物，你可以叫我：白桦
+
+研究兴趣集中在 **大语言模型智能体** 与 **地学数值模拟** 的交叉地带：智能体编排、RAG、受约束生成与闭环自修复，也做地球动力学数值模拟（ASPECT）与钻井参数优化。
+
+## 教育经历
+
+* **西安交通大学** · 软件工程 · 硕士研究生（2025.09 – 至今）
+* **胜利油田第一中学** · 理科实验班（2018.09 – 2021.06）
+
+## 项目经历
+
+* **胜利钻井数字孪生**（2026.05 – 至今）
+
+  负责孪生系统的软件架构维护与敏捷迭代，搭建可扩展、易迭代的系统底座，支撑需求快速落地；参与需求沟通与原型演示，推动参数优化智能体在真实钻井场景的工程化验证。
+
+* **APBA：面向 ASPECT 的数值模拟参数文件自动生成系统**（2026.05 – 2026.08）
+
+  负责软件架构设计，构建工具链与测试集，开发并调试智能体核心模块。相关论文被 2026 中国地球科学联合学术年会接收（第 143 专题 · 口头报告）。
+
+## 专业技能
+
+* **智能体与 LLM 工程**：智能体编排、RAG 两级检索、受约束配置 / 代码生成、闭环自修复
+* **数值模拟与地学建模**：ASPECT 地球动力学数值模拟、岩石圈热对流建模、钻井参数优化
+* **编程语言**：C/C++、Python
+* **软件工程与工具**：软件架构设计、测试集构建、敏捷迭代、Git、科学计算
+
+## 荣誉奖励
+
+* CCF CSP 2019 一等奖、NOIP 2018 二等奖
+* 中国地球物理年会学生会员（2026 – 至今）
 
 ## 联系我
-* 微信 `Betulaceae2002`
-* E-mail `baihua@stu.xjtu.edu.cn`
 
-## 友情链接
-
-### 少年时代
-- [@shiokiri](https://shiokiri.com/)
-- [@shzr](https://www.cnblogs.com/shzr)
-- [@ctz](https://ctz45562.github.io/)
-- [@Juanfeng](https://www.luogu.com.cn/blog/Juan-feng/)
-- [@ZUTTER](https://www.cnblogs.com/ZUTTER)
-- [@swy](https://www.cnblogs.com/suwakow)
-- [@Riverfun](https://stevebraveman.github.io/)
-- [@zhuoer](https://geiz-revive.github.io/)
-- [@Taduro](https://dftyem.github.io/)
-- [@Tommy_clas](https://www.luogu.com.cn/user/110471#article)
-- [@rehtorbegnaro](https://www.yukimisdiary.org/)
-- [@asuldb](https://www.cnblogs.com/asuldb)
-- [@zzzyc](https://www.cnblogs.com/zzzyc)
-- [@SuperGoodGame](https://www.cnblogs.com/SuperGoodGame/)
-- [烦人の蠼螋精 ](https://home.cnblogs.com/u/1438540)
-### 青年时代
-- [@Aliemo](https://www.cnblogs.com/Aliemo) My copilot
-- [@翰林的小站](https://blog.hanlin.press/) QDU第一巴图鲁
-- [@refun](https://www.cnblogs.com/refun) 我想要飞上天和Refun肩并肩
-- [@Asia](https://www.cnblogs.com/victorique) 我想要飞上天和Asia肩并肩
-### 人类非物质文化遗产
-- [机房人物列传](https://ctz45562.github.io/2020/05/28/SLYZ%C2%B72018%E6%9C%BA%E6%88%BF%E4%BA%BA%E7%89%A9%E5%88%97%E4%BC%A0/)
+* E-mail `baijun2002@icloud.com`
+* 欢迎交流，请多指教！

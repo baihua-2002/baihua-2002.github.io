@@ -4,6 +4,8 @@ theme: PaperMod
 
 enableInlineShortcodes: true
 enableRobotsTXT: true
+hasCJKLanguage: true
+summaryLength: 60
 pagination:
   pagerSize: 20
 
@@ -13,20 +15,20 @@ taxonomies:
 menu:
     main:
         - name: 博客
-          url: posts/
+          url: /posts/
           weight: 1
         - name: 归档
-          url: archive/
+          url: /archive/
           weight: 2
         - name: 标签
-          url: tags/
+          url: /tags/
           weight: 3
         - name: 关于
-          url: about/
+          url: /about/
           weight: 4
 
 params:
-    description: "白桦的博客：学习笔记、OI 回忆与生活记录。"
+    description: "白桦的博客：科学计算，智能体，地球物理学和生活"
     author: 白桦
     # googleAnalyticsID: G-XXXXX
     DateFormat: "2006-01-02"
@@ -52,23 +54,23 @@ params:
     profileMode:
           enabled: true
           title: 白桦
-          subtitle: "大数据 × 地矿油 · 前 OI 选手 · 记得工作的时候称植物，你可以叫我：白桦"
+          subtitle: "前 OI 选手 · LLM 智能体 · 地学数值模拟 · 记得工作的时候称植物，你可以叫我：白桦"
           imageUrl: "images/avata.jpg"
           imageWidth: 140
           imageHeight: 140
           buttons:
             - name: 博客
-              url: posts/
+              url: /posts/
             - name: 归档
-              url: archive/
+              url: /archive/
             - name: 标签
-              url: tags/
+              url: /tags/
             - name: 关于
-              url: about/
+              url: /about/
 
     socialIcons:
         - name: Email
-          url: mailto:baihua@stu.xjtu.edu.cn
+          url: mailto:baijun2002@icloud.com
         - name: GitHub
           url: https://github.com/baihua-2002
 

@@ -1,0 +1,88 @@
+/* ============================================================
+   Claude 风格定制：浅黄书页底色 + 衬线字体
+   加载顺序：core → common → extended（本文件最后加载，优先生效）
+   ============================================================ */
+
+:root {
+    /* 书页纸色：浅黄米色，卡片稍亮 */
+    --theme: #f5efdf;
+    --entry: #faf6e9;
+    /* 墨色文字 */
+    --primary: #32302a;
+    --secondary: #7c7663;
+    --tertiary: #d8d0b6;
+    --content: #3a382f;
+    /* 代码与边框 */
+    --code-bg: #ece5cf;
+    --border: #e4ddc6;
+}
+
+/* 衬线字体：拉丁字符用 Georgia，中文回退宋体系（macOS/Windows/Linux） */
+body,
+h1, h2, h3, h4, h5, h6,
+.entry-content, .post-content,
+.entry-header, .page-header, .footer,
+.profile .profile_inner {
+    font-family: Georgia, "Songti SC", "STSong", "Noto Serif SC", "Source Han Serif SC", "SimSun", serif;
+}
+
+/* 代码与键盘按键保持等宽 */
+code, pre, kbd, samp {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+/* 文章卡片：书页质感（细边框 + 极轻阴影） */
+.post-entry, .first-entry, .tag-entry {
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: 0 1px 2px rgb(80 70 40 / 0.06);
+}
+
+.post-entry:hover, .first-entry:hover, .tag-entry:hover {
+    box-shadow: 0 3px 12px rgb(80 70 40 / 0.10);
+}
+
+/* 列表摘要排版：单段、行距适中 */
+.entry-content p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* 正文与摘要中的链接：暖赭色 + 柔和下划线 */
+.post-content a, .entry-content a {
+    color: #a2531f;
+    text-decoration: underline;
+    text-decoration-color: rgb(162 83 31 / 0.35);
+    text-underline-offset: 3px;
+}
+
+.post-content a:hover, .entry-content a:hover {
+    color: #7c3d12;
+    text-decoration-color: #7c3d12;
+}
+
+/* 首页按钮：纸面按钮 */
+.button {
+    background: var(--tertiary);
+}
+
+.button:hover {
+    background: #e8dfc4;
+}
+
+/* 代码块与引用块：书页式细边框 */
+.post-content pre, .highlight pre {
+    border: 1px solid var(--border);
+}
+
+.post-content blockquote {
+    border-left: 3px solid var(--tertiary);
+    color: var(--secondary);
+    font-style: normal;
+}
+
+/* 表格线用暖色 */
+.post-content table th, .post-content table td {
+    border-color: var(--border);
+}
