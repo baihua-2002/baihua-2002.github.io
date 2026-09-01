@@ -1,0 +1,170 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>计算理论知识纲要 | 白桦的博客</title><meta name=keywords content="学习笔记,数学"><meta name=description content="Part Ⅰ 正则语言
+有穷自动机
+形式化定义
+$$
+(Q,\Sigma,\delta,q_0,F)
+$$
+分别表示字母表，状态集合，转移函数，起始状态，接收状态集合
+正则语言
+
+
+有穷自动机判定的语言叫做 正则语言。
+
+
+正则语言在正则云算下是封闭的，包括并、连接和*
+
+
+非确定性有穷自动机和确定性有穷自动机等价。因此，正则语言也可与被非确定性有穷自动机识别。
+
+
+正则表达式是用正则运算构造的表达式，和有穷自动机具备等价性。
+
+
+广义非确定有穷自动机
+仅有一个起始状态和一个接收状态。形式化定义为$(Q,\Sigma,\delta,q_{start},q_{accept})$。分别表示字母表，状态集合，转移函数，起始状态，接收状态。
+关于正则语言的泵引理
+用于证明非正则语言。
+若$A$是一个正则语言，存在一个泵长度$p$，使得，如果$s$是$A$中任一长度不小于$p$的串，那么$s$可以被分为$3$段，$s=xyz$，满足：
+
+对于每一个$i \ge 0,xy^iz \in A$
+$|y| > 0$
+$|xy | \le p$
+
+练习
+
+给出语言，画出有穷自动机（例 ）
+非确定性有穷自动机转为确定性有穷自动机（例1.16）
+根据正则表达式转为非确定有穷自动机（例1.30，练习17，19，28）
+确定有穷自动机转化为广义非确定有穷自动机。（练习1.21）
+用泵引理证明不是正则的。（例题、练习1.29）
+
+part Ⅱ 上下文无关文法
+上下文无关文法的形式化定义
+一个文法由一组替换规则组成，替换规则又称为产生式，符号称为变元，字符串由变元和终结符组成。终结符一般为大写字母。
+正则语言 都可以用上下文无关文法表示。
+乔姆斯基范式
+形如：
+$$
+A \rightarrow BC
+\newline
+A \rightarrow a
+$$
+此外，允许$S \rightarrow \epsilon$
+下推自动机
+$$
+(Q,\Sigma,\Gamma,\delta,q_0,F)
+$$
+分别表示状态集、输入字母表、栈字母表、转移函数、起始状态、接受状态集。
+上下文无关文法与下推自动机对应。具有等价性。
+泵引理
+对于一个上下文无关语言，存在一个$p$，使得$A$中任意长度不小于$p$的$s$能够分为$5$段，$s=uvxyz$，满足：
+$$
+对于i \ge 0,uv^ixy^iz \in A
+\newline
+|xy| \gt 0
+\newline
+|vxy| \le p
+$$"><meta name=author content="白桦"><link rel=canonical href=https://baihua-2002.github.io/posts/%E8%AE%A1%E7%AE%97%E7%90%86%E8%AE%BA%E6%8F%90%E7%BA%B2/><link crossorigin=anonymous href=/assets/css/stylesheet.b25a2acc22d438da411907ae69c957b3b8a6630a35eff4cfe25080d840a516f9.css integrity="sha256-sloqzCLUONpBGQeuaclXs7imYwo17/TP4lCA2EClFvk=" rel="preload stylesheet" as=style><link rel=icon href=https://baihua-2002.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://baihua-2002.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://baihua-2002.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://baihua-2002.github.io/apple-touch-icon.png><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=en href=https://baihua-2002.github.io/posts/%E8%AE%A1%E7%AE%97%E7%90%86%E8%AE%BA%E6%8F%90%E7%BA%B2/><noscript><style>#theme-toggle,.top-link{display:none}</style></noscript><meta property="og:url" content="https://baihua-2002.github.io/posts/%E8%AE%A1%E7%AE%97%E7%90%86%E8%AE%BA%E6%8F%90%E7%BA%B2/"><meta property="og:site_name" content="白桦的博客"><meta property="og:title" content="计算理论知识纲要"><meta property="og:description" content="Part Ⅰ 正则语言 有穷自动机 形式化定义 $$ (Q,\Sigma,\delta,q_0,F) $$
+分别表示字母表，状态集合，转移函数，起始状态，接收状态集合
+正则语言 有穷自动机判定的语言叫做 正则语言。
+正则语言在正则云算下是封闭的，包括并、连接和*
+非确定性有穷自动机和确定性有穷自动机等价。因此，正则语言也可与被非确定性有穷自动机识别。
+正则表达式是用正则运算构造的表达式，和有穷自动机具备等价性。
+广义非确定有穷自动机 仅有一个起始状态和一个接收状态。形式化定义为$(Q,\Sigma,\delta,q_{start},q_{accept})$。分别表示字母表，状态集合，转移函数，起始状态，接收状态。
+关于正则语言的泵引理 用于证明非正则语言。
+若$A$是一个正则语言，存在一个泵长度$p$，使得，如果$s$是$A$中任一长度不小于$p$的串，那么$s$可以被分为$3$段，$s=xyz$，满足：
+对于每一个$i \ge 0,xy^iz \in A$ $|y| > 0$ $|xy | \le p$ 练习 给出语言，画出有穷自动机（例 ） 非确定性有穷自动机转为确定性有穷自动机（例1.16） 根据正则表达式转为非确定有穷自动机（例1.30，练习17，19，28） 确定有穷自动机转化为广义非确定有穷自动机。（练习1.21） 用泵引理证明不是正则的。（例题、练习1.29） part Ⅱ 上下文无关文法 上下文无关文法的形式化定义 一个文法由一组替换规则组成，替换规则又称为产生式，符号称为变元，字符串由变元和终结符组成。终结符一般为大写字母。
+正则语言 都可以用上下文无关文法表示。
+乔姆斯基范式 形如： $$ A \rightarrow BC \newline A \rightarrow a $$ 此外，允许$S \rightarrow \epsilon$
+下推自动机 $$ (Q,\Sigma,\Gamma,\delta,q_0,F) $$
+分别表示状态集、输入字母表、栈字母表、转移函数、起始状态、接受状态集。
+上下文无关文法与下推自动机对应。具有等价性。
+泵引理 对于一个上下文无关语言，存在一个$p$，使得$A$中任意长度不小于$p$的$s$能够分为$5$段，$s=uvxyz$，满足： $$ 对于i \ge 0,uv^ixy^iz \in A \newline |xy| \gt 0 \newline |vxy| \le p $$"><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2026-01-09T00:00:00+00:00"><meta property="article:modified_time" content="2026-01-09T00:00:00+00:00"><meta property="article:tag" content="学习笔记"><meta property="article:tag" content="数学"><meta name=twitter:card content="summary"><meta name=twitter:title content="计算理论知识纲要"><meta name=twitter:description content="Part Ⅰ 正则语言
+有穷自动机
+形式化定义
+$$
+(Q,\Sigma,\delta,q_0,F)
+$$
+分别表示字母表，状态集合，转移函数，起始状态，接收状态集合
+正则语言
+
+
+有穷自动机判定的语言叫做 正则语言。
+
+
+正则语言在正则云算下是封闭的，包括并、连接和*
+
+
+非确定性有穷自动机和确定性有穷自动机等价。因此，正则语言也可与被非确定性有穷自动机识别。
+
+
+正则表达式是用正则运算构造的表达式，和有穷自动机具备等价性。
+
+
+广义非确定有穷自动机
+仅有一个起始状态和一个接收状态。形式化定义为$(Q,\Sigma,\delta,q_{start},q_{accept})$。分别表示字母表，状态集合，转移函数，起始状态，接收状态。
+关于正则语言的泵引理
+用于证明非正则语言。
+若$A$是一个正则语言，存在一个泵长度$p$，使得，如果$s$是$A$中任一长度不小于$p$的串，那么$s$可以被分为$3$段，$s=xyz$，满足：
+
+对于每一个$i \ge 0,xy^iz \in A$
+$|y| > 0$
+$|xy | \le p$
+
+练习
+
+给出语言，画出有穷自动机（例 ）
+非确定性有穷自动机转为确定性有穷自动机（例1.16）
+根据正则表达式转为非确定有穷自动机（例1.30，练习17，19，28）
+确定有穷自动机转化为广义非确定有穷自动机。（练习1.21）
+用泵引理证明不是正则的。（例题、练习1.29）
+
+part Ⅱ 上下文无关文法
+上下文无关文法的形式化定义
+一个文法由一组替换规则组成，替换规则又称为产生式，符号称为变元，字符串由变元和终结符组成。终结符一般为大写字母。
+正则语言 都可以用上下文无关文法表示。
+乔姆斯基范式
+形如：
+$$
+A \rightarrow BC
+\newline
+A \rightarrow a
+$$
+此外，允许$S \rightarrow \epsilon$
+下推自动机
+$$
+(Q,\Sigma,\Gamma,\delta,q_0,F)
+$$
+分别表示状态集、输入字母表、栈字母表、转移函数、起始状态、接受状态集。
+上下文无关文法与下推自动机对应。具有等价性。
+泵引理
+对于一个上下文无关语言，存在一个$p$，使得$A$中任意长度不小于$p$的$s$能够分为$5$段，$s=uvxyz$，满足：
+$$
+对于i \ge 0,uv^ixy^iz \in A
+\newline
+|xy| \gt 0
+\newline
+|vxy| \le p
+$$"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"博客","item":"https://baihua-2002.github.io/posts/"},{"@type":"ListItem","position":2,"name":"计算理论知识纲要","item":"https://baihua-2002.github.io/posts/%E8%AE%A1%E7%AE%97%E7%90%86%E8%AE%BA%E6%8F%90%E7%BA%B2/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"计算理论知识纲要","name":"计算理论知识纲要","description":"Part Ⅰ 正则语言 有穷自动机 形式化定义 $$ (Q,\\Sigma,\\delta,q_0,F) $$\n分别表示字母表，状态集合，转移函数，起始状态，接收状态集合\n正则语言 有穷自动机判定的语言叫做 正则语言。\n正则语言在正则云算下是封闭的，包括并、连接和*\n非确定性有穷自动机和确定性有穷自动机等价。因此，正则语言也可与被非确定性有穷自动机识别。\n正则表达式是用正则运算构造的表达式，和有穷自动机具备等价性。\n广义非确定有穷自动机 仅有一个起始状态和一个接收状态。形式化定义为$(Q,\\Sigma,\\delta,q_{start},q_{accept})$。分别表示字母表，状态集合，转移函数，起始状态，接收状态。\n关于正则语言的泵引理 用于证明非正则语言。\n若$A$是一个正则语言，存在一个泵长度$p$，使得，如果$s$是$A$中任一长度不小于$p$的串，那么$s$可以被分为$3$段，$s=xyz$，满足：\n对于每一个$i \\ge 0,xy^iz \\in A$ $|y| \u0026gt; 0$ $|xy | \\le p$ 练习 给出语言，画出有穷自动机（例 ） 非确定性有穷自动机转为确定性有穷自动机（例1.16） 根据正则表达式转为非确定有穷自动机（例1.30，练习17，19，28） 确定有穷自动机转化为广义非确定有穷自动机。（练习1.21） 用泵引理证明不是正则的。（例题、练习1.29） part Ⅱ 上下文无关文法 上下文无关文法的形式化定义 一个文法由一组替换规则组成，替换规则又称为产生式，符号称为变元，字符串由变元和终结符组成。终结符一般为大写字母。\n正则语言 都可以用上下文无关文法表示。\n乔姆斯基范式 形如： $$ A \\rightarrow BC \\newline A \\rightarrow a $$ 此外，允许$S \\rightarrow \\epsilon$\n下推自动机 $$ (Q,\\Sigma,\\Gamma,\\delta,q_0,F) $$\n分别表示状态集、输入字母表、栈字母表、转移函数、起始状态、接受状态集。\n上下文无关文法与下推自动机对应。具有等价性。\n泵引理 对于一个上下文无关语言，存在一个$p$，使得$A$中任意长度不小于$p$的$s$能够分为$5$段，$s=uvxyz$，满足： $$ 对于i \\ge 0,uv^ixy^iz \\in A \\newline |xy| \\gt 0 \\newline |vxy| \\le p $$\n","keywords":["学习笔记","数学"],"articleBody":"Part Ⅰ 正则语言 有穷自动机 形式化定义 $$ (Q,\\Sigma,\\delta,q_0,F) $$\n分别表示字母表，状态集合，转移函数，起始状态，接收状态集合\n正则语言 有穷自动机判定的语言叫做 正则语言。\n正则语言在正则云算下是封闭的，包括并、连接和*\n非确定性有穷自动机和确定性有穷自动机等价。因此，正则语言也可与被非确定性有穷自动机识别。\n正则表达式是用正则运算构造的表达式，和有穷自动机具备等价性。\n广义非确定有穷自动机 仅有一个起始状态和一个接收状态。形式化定义为$(Q,\\Sigma,\\delta,q_{start},q_{accept})$。分别表示字母表，状态集合，转移函数，起始状态，接收状态。\n关于正则语言的泵引理 用于证明非正则语言。\n若$A$是一个正则语言，存在一个泵长度$p$，使得，如果$s$是$A$中任一长度不小于$p$的串，那么$s$可以被分为$3$段，$s=xyz$，满足：\n对于每一个$i \\ge 0,xy^iz \\in A$ $|y| \u003e 0$ $|xy | \\le p$ 练习 给出语言，画出有穷自动机（例 ） 非确定性有穷自动机转为确定性有穷自动机（例1.16） 根据正则表达式转为非确定有穷自动机（例1.30，练习17，19，28） 确定有穷自动机转化为广义非确定有穷自动机。（练习1.21） 用泵引理证明不是正则的。（例题、练习1.29） part Ⅱ 上下文无关文法 上下文无关文法的形式化定义 一个文法由一组替换规则组成，替换规则又称为产生式，符号称为变元，字符串由变元和终结符组成。终结符一般为大写字母。\n正则语言 都可以用上下文无关文法表示。\n乔姆斯基范式 形如： $$ A \\rightarrow BC \\newline A \\rightarrow a $$ 此外，允许$S \\rightarrow \\epsilon$\n下推自动机 $$ (Q,\\Sigma,\\Gamma,\\delta,q_0,F) $$\n分别表示状态集、输入字母表、栈字母表、转移函数、起始状态、接受状态集。\n上下文无关文法与下推自动机对应。具有等价性。\n泵引理 对于一个上下文无关语言，存在一个$p$，使得$A$中任意长度不小于$p$的$s$能够分为$5$段，$s=uvxyz$，满足： $$ 对于i \\ge 0,uv^ixy^iz \\in A \\newline |xy| \\gt 0 \\newline |vxy| \\le p $$\n练习 将上下文无关文法转化为等价的下推自动机 利用泵引理证明（练习2.32） Part Ⅲ 可计算性理论 图灵机 形式化定义 $$ (Q,\\Sigma,\\Gamma,\\delta,q_0,q_{accept},q_{reject}) $$\n分别是状态集、输入字母表、带字母表、转移函数、起始状态、接受状态、拒绝状态。\n图灵可识别 可能会循环，或者接受，或者停机\n图灵可判定 或者接受，或者停机\n多带图灵机 多带图灵机和单带图灵机等价，可以转换。\n非确定性图灵机 等价于确定性图灵机；\n练习 给出图灵机和输入，模拟运行（例3.4，例3.5）\n可判定问题的证明\n确定性有穷自动机接受问题\n非确定有穷自动机的接受问题\n正则表达式的派生问题\n确定性自动机、上下文无关文法的空性问题、等价性问题、派生问题\n线性界限自动机（例5.8）\n存在不能被任何图灵机识别的语言（例4.15）\n图灵可识别，补可识别的语言，就是图灵可判定的（例4.16）\n满映射、相同规模、对应的定义（4.10，4.12）\n证明不可判定；假设可判定，构造图灵机，找到矛盾；\n停机问题、空性问题、正则问题、等价性问题（5.1到5.4） 计算历史的定义、线性界限自动机的定义（接受性问题、空性问题）、可计算函数的定义、映射可规约的定义和相关结论。 Part Ⅳ 可计算性理论高级专题 递归定理 证明$A_{TM}$不可判定 MIN极小图灵机 定义 不是图灵可识别的 Part Ⅴ 时间复杂度 时间复杂度的定义 图灵机经过的最大的步数 大O计法的定义 由函数写出渐进函数。 时间复杂度类的定义 模型之间的关系，两个结论 多带图灵机和单带图灵机之间的复杂度关系 P和NP类相关 P类的定义 NP类的定义 ","wordCount":"138","inLanguage":"en","datePublished":"2026-01-09T00:00:00Z","dateModified":"2026-01-09T00:00:00Z","author":{"@type":"Person","name":"白桦"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://baihua-2002.github.io/posts/%E8%AE%A1%E7%AE%97%E7%90%86%E8%AE%BA%E6%8F%90%E7%BA%B2/"},"publisher":{"@type":"Organization","name":"白桦的博客","logo":{"@type":"ImageObject","url":"https://baihua-2002.github.io/favicon.ico"}}}</script><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.css integrity=sha384-wcIxkf4k558AjM3Yz3BBFQUbk/zgIYC2R0QpeeYb+TwlBVMrlgLqwRjRtGZiK7ww crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/katex.min.js integrity=sha384-hIoBPJpTUs74ddyc4bFZSM1TVlQDA60VBbJS0oA934VSz82sBx1X7kSx2ATBDIyd crossorigin=anonymous></script><script defer src=https://cdn.jsdelivr.net/npm/katex@0.16.10/dist/contrib/auto-render.min.js integrity=sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk crossorigin=anonymous onload=renderMathInElement(document.body)></script><script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\begin{equation}",right:"\\end{equation}",display:!0},{left:"\\begin{equation*}",right:"\\end{equation*}",display:!0},{left:"\\begin{align}",right:"\\end{align}",display:!0},{left:"\\begin{align*}",right:"\\end{align*}",display:!0},{left:"\\begin{alignat}",right:"\\end{alignat}",display:!0},{left:"\\begin{gather}",right:"\\end{gather}",display:!0},{left:"\\begin{CD}",right:"\\end{CD}",display:!0}],throwOnError:!1})})</script></head><body id=top><header class=header><nav class=nav><div class=logo><a href=https://baihua-2002.github.io/ accesskey=h title=白桦的博客><img src=https://baihua-2002.github.io/favicon.ico alt aria-label=logo height=18 width=18>白桦的博客</a><div class=logo-switches></div></div><ul id=menu><li><a href=https://baihua-2002.github.io/posts/ title=博客><span>博客</span></a></li><li><a href=https://baihua-2002.github.io/archive/ title=归档><span>归档</span></a></li><li><a href=https://baihua-2002.github.io/tags/ title=标签><span>标签</span></a></li><li><a href=https://baihua-2002.github.io/about/ title=关于><span>关于</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><h1 class="post-title entry-hint-parent">计算理论知识纲要</h1><div class=post-meta><span title='2026-01-09 00:00:00 +0000 UTC'>2026-01-09</span>&nbsp;&#183;&nbsp;白桦</div></header><div class=post-content><h2 id=part--正则语言>Part Ⅰ 正则语言</h2><h3 id=有穷自动机>有穷自动机</h3><h4 id=形式化定义>形式化定义</h4><p>$$
+(Q,\Sigma,\delta,q_0,F)
+$$</p><p>分别表示字母表，状态集合，转移函数，起始状态，接收状态集合</p><h3 id=正则语言>正则语言</h3><ul><li><p>有穷自动机判定的语言叫做 <strong>正则语言</strong>。</p></li><li><p>正则语言在正则云算下是封闭的，包括并、连接和*</p></li><li><p>非确定性有穷自动机和确定性有穷自动机等价。因此，正则语言也可与被非确定性有穷自动机识别。</p></li><li><p><strong>正则表达式</strong>是用正则运算构造的表达式，和有穷自动机具备等价性。</p></li></ul><h3 id=广义非确定有穷自动机>广义非确定有穷自动机</h3><p>仅有一个起始状态和一个接收状态。形式化定义为$(Q,\Sigma,\delta,q_{start},q_{accept})$。分别表示字母表，状态集合，转移函数，起始状态，接收状态。</p><h3 id=关于正则语言的泵引理>关于正则语言的泵引理</h3><p>用于证明非正则语言。</p><p>若$A$是一个正则语言，存在一个泵长度$p$，使得，如果$s$是$A$中任一长度不小于$p$的串，那么$s$可以被分为$3$段，$s=xyz$，满足：</p><ol><li>对于每一个$i \ge 0,xy^iz \in A$</li><li>$|y| > 0$</li><li>$|xy | \le p$</li></ol><h3 id=练习>练习</h3><ul><li>给出语言，画出有穷自动机（例 ）</li><li>非确定性有穷自动机转为确定性有穷自动机（例1.16）</li><li>根据正则表达式转为非确定有穷自动机（例1.30，练习17，19，28）</li><li>确定有穷自动机转化为广义非确定有穷自动机。（练习1.21）</li><li>用泵引理证明不是正则的。（例题、练习1.29）</li></ul><h2 id=part--上下文无关文法>part Ⅱ 上下文无关文法</h2><h3 id=上下文无关文法的形式化定义>上下文无关文法的形式化定义</h3><p>一个文法由一组替换规则组成，替换规则又称为产生式，符号称为变元，字符串由变元和终结符组成。终结符一般为大写字母。</p><p><strong>正则语言</strong> 都可以用上下文无关文法表示。</p><h3 id=乔姆斯基范式>乔姆斯基范式</h3><p>形如：
+$$
+A \rightarrow BC
+\newline
+A \rightarrow a
+$$
+此外，允许$S \rightarrow \epsilon$</p><h3 id=下推自动机>下推自动机</h3><p>$$
+(Q,\Sigma,\Gamma,\delta,q_0,F)
+$$</p><p>分别表示状态集、输入字母表、栈字母表、转移函数、起始状态、接受状态集。</p><p>上下文无关文法与下推自动机对应。具有等价性。</p><h3 id=泵引理>泵引理</h3><p>对于一个上下文无关语言，存在一个$p$，使得$A$中任意长度不小于$p$的$s$能够分为$5$段，$s=uvxyz$，满足：
+$$
+对于i \ge 0,uv^ixy^iz \in A
+\newline
+|xy| \gt 0
+\newline
+|vxy| \le p
+$$</p><h3 id=练习-1>练习</h3><ul><li>将上下文无关文法转化为等价的下推自动机</li><li>利用泵引理证明（练习2.32）</li></ul><h2 id=part--可计算性理论>Part Ⅲ 可计算性理论</h2><h3 id=图灵机>图灵机</h3><h4 id=形式化定义-1>形式化定义</h4><p>$$
+(Q,\Sigma,\Gamma,\delta,q_0,q_{accept},q_{reject})
+$$</p><p>分别是状态集、输入字母表、带字母表、转移函数、起始状态、接受状态、拒绝状态。</p><h4 id=图灵可识别>图灵可识别</h4><p>可能会循环，或者接受，或者停机</p><h4 id=图灵可判定>图灵可判定</h4><p>或者接受，或者停机</p><h4 id=多带图灵机>多带图灵机</h4><p>多带图灵机和单带图灵机等价，可以转换。</p><h4 id=非确定性图灵机>非确定性图灵机</h4><p>等价于确定性图灵机；</p><h2 id=练习-2>练习</h2><ul><li><p>给出图灵机和输入，模拟运行（例3.4，例3.5）</p></li><li><p>可判定问题的证明</p><ul><li><p>确定性有穷自动机接受问题</p></li><li><p>非确定有穷自动机的接受问题</p></li><li><p>正则表达式的派生问题</p></li><li><p>确定性自动机、上下文无关文法的空性问题、等价性问题、派生问题</p></li><li><p>线性界限自动机（例5.8）</p></li></ul></li><li><p>存在不能被任何图灵机识别的语言（例4.15）</p></li><li><p>图灵可识别，补可识别的语言，就是图灵可判定的（例4.16）</p></li><li><p>满映射、相同规模、对应的定义（4.10，4.12）</p></li><li><p>证明不可判定；假设可判定，构造图灵机，找到矛盾；</p><ul><li>停机问题、空性问题、正则问题、等价性问题（5.1到5.4）</li><li>计算历史的定义、线性界限自动机的定义（接受性问题、空性问题）、可计算函数的定义、映射可规约的定义和相关结论。</li></ul></li></ul><h2 id=part--可计算性理论高级专题>Part Ⅳ 可计算性理论高级专题</h2><h3 id=递归定理>递归定理</h3><ul><li>证明$A_{TM}$不可判定</li></ul><h3 id=min极小图灵机>MIN极小图灵机</h3><ul><li>定义</li><li>不是图灵可识别的</li></ul><h2 id=part--时间复杂度>Part Ⅴ 时间复杂度</h2><h3 id=时间复杂度的定义>时间复杂度的定义</h3><ul><li>图灵机经过的最大的步数</li></ul><h3 id=大o计法的定义>大O计法的定义</h3><ul><li>由函数写出渐进函数。</li></ul><h3 id=时间复杂度类的定义>时间复杂度类的定义</h3><h3 id=模型之间的关系两个结论>模型之间的关系，两个结论</h3><ul><li>多带图灵机和单带图灵机之间的复杂度关系</li></ul><h3 id=p和np类相关>P和NP类相关</h3><ul><li>P类的定义</li><li>NP类的定义</li></ul></div><footer class=post-footer><ul class=post-tags><li><a href=https://baihua-2002.github.io/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/>学习笔记</a></li><li><a href=https://baihua-2002.github.io/tags/%E6%95%B0%E5%AD%A6/>数学</a></li></ul></footer></article></main><footer class=footer><span>&copy; 2026 白桦的博客</span> ·
+<span>Made with
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>hugo</a>, <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>papermod</a>, &
+<a href=https://github.com/pmichaillat/hugo-website/ rel=noopener target=_blank>hugo-website</a>.</span></footer><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>document.querySelectorAll("pre > code").forEach(e=>{const n=e.parentNode.parentNode,t=document.createElement("button");t.classList.add("copy-code"),t.innerHTML="copy";function s(){t.innerHTML="copied!",setTimeout(()=>{t.innerHTML="copy"},2e3)}t.addEventListener("click",t=>{if("clipboard"in navigator){navigator.clipboard.writeText(e.textContent),s();return}const n=document.createRange();n.selectNodeContents(e);const o=window.getSelection();o.removeAllRanges(),o.addRange(n);try{document.execCommand("copy"),s()}catch{}o.removeRange(n)}),n.classList.contains("highlight")?n.appendChild(t):n.parentNode.firstChild==n||(e.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?e.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(t):e.parentNode.appendChild(t))})</script></body></html>
