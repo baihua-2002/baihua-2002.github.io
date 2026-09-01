@@ -15,7 +15,10 @@ git config user.name  >/dev/null 2>&1 || git config user.name  "baihua-2002"
 git config user.email >/dev/null 2>&1 || git config user.email "baijun2002@icloud.com"
 
 echo "==> [1/3] 构建站点"
-hugo --gc --minify
+# 构建到独立临时目录，避免与本机可能正在运行的 hugo server 写入 public/ 产生冲突
+BUILD_DIR="$(mktemp -d)"
+trap 'rm -rf "$BUILD_DIR" "$DEPLOY_DIR"' EXIT
+hugo --gc --minify -d "$BUILD_DIR"
 
 echo "==> [2/3] 推送源码到 source 分支"
 if [ -n "$(git status --porcelain)" ]; then
@@ -29,9 +32,8 @@ fi
 
 echo "==> [3/3] 发布构建产物到 main 分支"
 DEPLOY_DIR="$(mktemp -d)"
-trap 'rm -rf "$DEPLOY_DIR"' EXIT
 git clone -q --depth 1 -b main "$REPO" "$DEPLOY_DIR"
-rsync -a --delete --exclude .git public/ "$DEPLOY_DIR"/
+rsync -a --delete --exclude .git "$BUILD_DIR"/ "$DEPLOY_DIR"/
 touch "$DEPLOY_DIR/.nojekyll"
 cd "$DEPLOY_DIR"
 if [ -n "$(git status --porcelain)" ]; then
