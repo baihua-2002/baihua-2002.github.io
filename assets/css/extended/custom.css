@@ -86,3 +86,42 @@ code, pre, kbd, samp {
 .post-content table th, .post-content table td {
     border-color: var(--border);
 }
+
+/* ============================================================
+   归档页移动端：月份标签弱化为索引样式，标题保持主体地位
+   （层次靠字号/字重/颜色/缩进表达，不依赖特定字体是否可用）
+   ============================================================ */
+@media screen and (max-width: 768px) {
+    /* 月份组：左侧书页式细线，形成视觉分组 */
+    .archive-month {
+        padding: 4px 0 4px 14px;
+        border-left: 2px solid var(--tertiary);
+    }
+
+    /* 月份标签：小号、次要色、加字距，仅作索引 */
+    .archive-month-header,
+    .archive-month-header .archive-header-link {
+        width: auto;
+        margin: 12px 0 2px;
+        font-size: 0.9rem;
+        font-weight: var(--semibold);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--secondary);
+    }
+
+    /* 文章标题：加大字重与行高，保持墨色主体地位 */
+    .archive-entry {
+        margin: 6px 0;
+        padding: 2px 0;
+    }
+
+    .archive-entry-title,
+    .archive-entry-title a {
+        margin: 3px 0;
+        font-size: 1.02rem;
+        font-weight: 600;
+        line-height: 1.55;
+        color: var(--primary);
+    }
+}
