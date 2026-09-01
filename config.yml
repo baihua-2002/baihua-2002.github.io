@@ -1,0 +1,95 @@
+baseURL: "https://baihua-2002.github.io/"
+title: 白桦的博客
+theme: PaperMod
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+pagination:
+  pagerSize: 20
+
+taxonomies:
+    tag: tags
+
+menu:
+    main:
+        - name: 博客
+          url: posts/
+          weight: 1
+        - name: 归档
+          url: archive/
+          weight: 2
+        - name: 标签
+          url: tags/
+          weight: 3
+        - name: 关于
+          url: about/
+          weight: 4
+
+params:
+    description: "白桦的博客：学习笔记、OI 回忆与生活记录。"
+    author: 白桦
+    # googleAnalyticsID: G-XXXXX
+    DateFormat: "2006-01-02"
+    defaultTheme: light
+    hideFooter: false
+    disableThemeToggle: true
+    ShowShareButtons: false
+    ShowReadingTime: false
+    disableSpecial1stPost: true
+    disableAnchoredHeadings: true
+    ShowPostNavLinks: false
+    ShowBreadCrumbs: false
+    ShowCodeCopyButtons: true
+    ShowAllPagesInArchive: true
+    MainSections: [posts]
+    ShowToc: false
+    disableScrollToTop: true
+    TocOpen: true
+    ShowWordCount: false
+    UseHugoToc: true
+    comments: false
+    math: true
+    profileMode:
+          enabled: true
+          title: 白桦
+          subtitle: "大数据 × 地矿油 · 前 OI 选手 · 记得工作的时候称植物，你可以叫我：白桦"
+          imageUrl: "images/avata.jpg"
+          imageWidth: 140
+          imageHeight: 140
+          buttons:
+            - name: 博客
+              url: posts/
+            - name: 归档
+              url: archive/
+            - name: 标签
+              url: tags/
+            - name: 关于
+              url: about/
+
+    socialIcons:
+        - name: Email
+          url: mailto:baihua@stu.xjtu.edu.cn
+        - name: GitHub
+          url: https://github.com/baihua-2002
+
+    assets:
+        disableScrollBarStyle: true
+    cover:
+        hiddenInList: false
+        hiddenInSingle: true
+    label:
+      text: 白桦的博客
+      icon: favicon.ico
+      iconHeight: 18
+
+markup:
+    goldmark:
+        renderer:
+            unsafe: true
+    highlight:
+        guessSyntax: true
+        style: autumn
+    tableOfContents:
+        endLevel: 2
+        ordered: false
+        startLevel: 2
